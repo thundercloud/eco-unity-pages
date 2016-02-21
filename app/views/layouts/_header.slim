@@ -1,0 +1,7 @@
+header
+  div
+    = link_to (image_tag (ApplicationController::SITE_HEADER_LOGO_URL), id: "header-logo"), root_url
+    
+    #header-text
+      p.header-main-text = ApplicationController::SITE_HEADER_NAME
+      p.header-add-text = ApplicationController::SITE_HEADER_TEXT

@@ -1,0 +1,75 @@
+@import global
+
+// Header
+
+header
+  padding: 36px 0
+
+#header-logo
+  width: 250px
+  height: 250px
+  float: left
+  display: block
+  background: 100% 100% no-repeat
+  background-size: cover
+
+#header-text
+  width: 75% 
+  height: 250px
+  float: left  
+
+.header-main-text
+  font-size: 500%
+  padding: 48px 0 0 0 
+  color: $text-color  
+  text-align: center  
+
+.header-add-text
+  font-size: 120%
+  padding: 60px 0 0 0
+  color: $text-color
+  text-align: center
+
+// Menu
+
+ul.menu
+  li
+    list-style-type: none
+    display: inline-block
+    &:hover
+      ul.submenu
+        display: block
+    a
+      font-size: 110%
+      padding: 0 5px
+      color: $text-color
+      text-decoration: none
+      &:hover
+        background-color: $bg-color 
+        font-weight: bold  
+
+// Page content 
+
+body 
+  background: $bg-color 
+
+.container 
+  padding: 0 20px
+  margin: 0 auto
+  max-width: 1000px
+  min-width: 700px
+
+.clear
+  clear: both  
+
+// Footer
+
+footer 
+  text-align: center
+  margin-top: 10px
+  padding: 5px  
+
+.footer_text
+  font-size: 100%
+  padding: 0 0 1px 0
+
