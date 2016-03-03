@@ -1,4 +1,59 @@
 h1 Список страниц
 
-ul.clear-markers
-  //li =link_to "Рубрики", "#"
+div.row
+  div.index-menu-block.control-left.rounded
+    h3 Домашняя страница
+    ul.clear-markers
+      li = link_to "Домашняя страница - Администратор", home_path(:user => ApplicationController::USER_ADMIN)
+	  li = link_to "Домашняя страница - Редактор", home_path(:user => ApplicationController::USER_EDITOR)
+	  li = link_to "Домашняя страница - Автор", home_path(:user => ApplicationController::USER_AUTHOR)
+	  li = link_to "Домашняя страница - Покупатель", home_path(:user => ApplicationController::USER_BUYER)
+	  li = link_to "Домашняя страница - Гость", home_path(:user => ApplicationController::USER_GUEST)
+
+  div.index-menu-block.control-left.rounded
+    h3 Активы сайта
+    ul.clear-markers
+      li = link_to "Активы сайта - Администратор", dashboard_path(:user => ApplicationController::USER_ADMIN)
+	  li = link_to "Активы сайта - Редактор", dashboard_path(:user => ApplicationController::USER_EDITOR)
+
+  div.index-menu-block.control-left.rounded
+    h3 Каталог
+    ul.clear-markers
+      li = link_to "Каталог - Администратор", catalog_path(:user => ApplicationController::USER_ADMIN)
+	  li = link_to "Каталог - Редактор", catalog_path(:user => ApplicationController::USER_EDITOR)
+	  li = link_to "Каталог - Автор", catalog_path(:user => ApplicationController::USER_AUTHOR)
+	  li = link_to "Каталог - Покупатель", catalog_path(:user => ApplicationController::USER_BUYER)
+	  li = link_to "Каталог - Гость", catalog_path(:user => ApplicationController::USER_GUEST)
+
+  div.index-menu-block.control-left.rounded
+    h3 Заказы
+    ul.clear-markers
+      li = link_to "Заказы - Администратор", orders_path(:user => ApplicationController::USER_ADMIN)
+	  li = link_to "Заказы - Редактор", orders_path(:user => ApplicationController::USER_EDITOR)
+
+  div.index-menu-block.control-left.rounded
+    h3 Контакты
+    ul.clear-markers
+      li = link_to "Контакты - Администратор", contacts_path(:user => ApplicationController::USER_ADMIN)
+	  li = link_to "Контакты - Редактор", contacts_path(:user => ApplicationController::USER_EDITOR)
+	  li = link_to "Контакты - Автор", contacts_path(:user => ApplicationController::USER_AUTHOR)
+	  li = link_to "Контакты - Покупатель", contacts_path(:user => ApplicationController::USER_BUYER)
+	  li = link_to "Контакты - Гость", contacts_path(:user => ApplicationController::USER_GUEST)
+
+  div.index-menu-block.control-left.rounded
+    h3 Дружественные сайты
+    ul.clear-markers
+      li = link_to "Дружественные сайты - Администратор", friends_path(:user => ApplicationController::USER_ADMIN)
+	  li = link_to "Дружественные сайты - Редактор", friends_path(:user => ApplicationController::USER_EDITOR)
+	  li = link_to "Дружественные сайты - Автор", friends_path(:user => ApplicationController::USER_AUTHOR)
+	  li = link_to "Дружественные сайты - Покупатель", friends_path(:user => ApplicationController::USER_BUYER)
+	  li = link_to "Дружественные сайты - Гость", friends_path(:user => ApplicationController::USER_GUEST)
+
+  div.index-menu-block.control-left.rounded
+    h3 Личный кабинет
+    ul.clear-markers
+      li = link_to "Личный кабинет - Администратор", profile_path(:user => ApplicationController::USER_ADMIN)
+	  li = link_to "Личный кабинет - Редактор", profile_path(:user => ApplicationController::USER_EDITOR)
+	  li = link_to "Личный кабинет - Автор", profile_path(:user => ApplicationController::USER_AUTHOR)
+	  li = link_to "Личный кабинет - Покупатель", profile_path(:user => ApplicationController::USER_BUYER)
+	  

@@ -1,10 +1,21 @@
 ul.menu.row
-  li.control-left =link_to "О проекте", "#" 
-  li.control-left =link_to "Библиотека", "#" 
-  li.control-left =link_to "Контакты", "#" 
-  li.control-left =link_to "Дружественные сайты", "#" 
-
-  //- if @user == 0
-  //  li.control-left =link_to "Тест", "#" 
-
-  li.control-right =link_to "Вход", "#" 
+  - if is_admin? (@user) or is_editor? (@user) or is_author? (@user) or is_buyer? (@user) or is_guest? (@user)
+    li.control-left = link_to "Домашняя страница", home_path(:user => @user)
+  - if is_admin? (@user) or is_editor? (@user)
+    li.control-left = link_to "Активы сайта", dashboard_path(:user => @user) 
+  - if is_admin? (@user) or is_editor? (@user) or is_author? (@user) or is_buyer? (@user) or is_guest? (@user)  
+    li.control-left = link_to "Каталог", catalog_path(:user => @user)
+  - if is_admin? (@user) or is_editor? (@user)
+    li.control-left = link_to "Заказы", orders_path(:user => @user)
+  - if is_admin? (@user) or is_editor? (@user) or is_author? (@user) or is_buyer? (@user) or is_guest? (@user)   
+    li.control-left = link_to "Контакты", contacts_path(:user => @user)
+  - if is_admin? (@user) or is_editor? (@user) or is_author? (@user) or is_buyer? (@user) or is_guest? (@user)
+    li.control-left = link_to "Дружественные сайты", friends_path(:user => @user) 
+  
+  - if is_admin? (@user) or is_editor? (@user) or is_author? (@user) or is_buyer? (@user)
+    li.control-right =link_to "Выход", root_path 
+    li.control-right =link_to "Личный кабинет", profile_path(:user => @user)    
+  - else 
+    - if is_guest? (@user)  
+      li.control-right =link_to "Вход", "#" 
+    
