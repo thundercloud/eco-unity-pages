@@ -1,0 +1,14 @@
+div
+  div.user-form
+    h2 Вход в личный кабинет
+
+    = form_for @user do |f|
+      = f.text_field nil, class: "input-user", placeholder: "Логин"  
+      = f.password_field nil, class: "input-user", placeholder: "Пароль"  
+    
+    div.footer-btn
+      .btn.control-right
+        =link_to "Войти", profile_path(:user => ApplicationController::USER_AUTHOR)
+      
+      = link_to "Регистрация", sign_up_path(:user => @user), class: 'control-left' 
+      = link_to "Забыли пароль?", forgot_password_path(:user => @user), class: 'control-left' 

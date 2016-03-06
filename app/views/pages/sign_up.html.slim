@@ -1,0 +1,15 @@
+div
+  div.user-form
+    h2 Регистрация
+
+	= form_for @user do |f|
+      = f.text_field nil, class: "input-user", placeholder: "Логин"  
+      = f.password_field nil, class: "input-user", placeholder: "Пароль"  
+      = f.password_field nil, class: "input-user", placeholder: "Подтверждение пароля"  
+      = f.select nil, @goals, { include_blank: ApplicationController::USER_GOAL }, { class: 'dropdown-user' }
+
+    div.footer-btn
+      .btn.control-right
+        =link_to "Регистрация", home_path(:user => ApplicationController::USER_AUTHOR)
+
+      = link_to "Забыли пароль?", forgot_password_path(:user => @user), class: 'control-left'   

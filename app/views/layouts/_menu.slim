@@ -17,5 +17,5 @@ ul.menu.row
     li.control-right =link_to "Личный кабинет", profile_path(:user => @user)    
   - else 
     - if is_guest? (@user)  
-      li.control-right =link_to "Вход", "#" 
+      li.control-right =link_to "Вход", sign_in_path(:user => @user) 
     

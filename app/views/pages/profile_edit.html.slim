@@ -1,0 +1,40 @@
+h1 Редактирование учётной записи
+
+div.row
+  div.control-left
+	h3 Контактное лицо
+
+	div.control-left
+	  img.avatar-img src="/images/home-page/image1.jpg" 
+
+	div.control-left
+	  = form_for @user do |f|
+	    = f.text_field nil, class: "input-user", placeholder: "Ф.И.О."
+	    br  
+	    = f.text_field nil, class: "input-user", placeholder: "Логин"  
+	    br  
+	    = f.text_field nil, class: "input-user", placeholder: "Контактный телефон" 
+	    br
+	    = f.text_field nil, class: "input-user", placeholder: "Skype" 
+
+  div.control-left
+    h3 Организация
+
+	div.control-left
+	  img.avatar-img src="/images/home-page/image1.jpg" 
+
+	div.control-left
+	  = form_for @user do |f|
+	    = f.text_field nil, class: "input-user", placeholder: "Название"
+	    br  
+	    = f.text_field nil, class: "input-user", placeholder: "УНН"  
+	    br  
+	    = f.text_field nil, class: "input-user", placeholder: "Адрес" 
+	    br
+	    = f.text_field nil, class: "input-user", placeholder: "Почтовый индекс" 
+	    br
+	    = f.text_field nil, class: "input-user", placeholder: "Телефон" 
+
+div
+  .btn.control-right
+    =link_to "Сохранить", home_path(:user => @user)

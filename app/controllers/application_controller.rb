@@ -14,6 +14,10 @@ class ApplicationController < ActionController::Base
   USER_AUTHOR = "author"
   USER_BUYER = "buyer"
   USER_GUEST = "guest"
+  # Goals
+  USER_GOAL = "Выберите цель регистрации"
+  USER_AUTHOR_GOAL = "Размещение материала"
+  USER_BUYER_GOAL = "Покупка, инвестирование"
   
   helper_method :is_admin?, :is_editor?, :is_author?, :is_buyer?, :is_guest?
 

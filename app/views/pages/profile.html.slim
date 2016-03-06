@@ -1,1 +1,7 @@
 h1 Личный кабинет
+
+div.row
+  - if is_admin? (@user) or is_editor? (@user) or is_author? (@user) or is_buyer? (@user)
+    div.control-left.rounded.profile-menu
+      img.profile-menu-img src="/images/home-page/image1.jpg" 
+      =link_to "Редактировать учётную запись", profile_edit_path(:user => @user)

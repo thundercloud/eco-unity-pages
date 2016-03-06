@@ -8,6 +8,12 @@ Rails.application.routes.draw do
   get '/contacts', to: 'pages#contacts'
   get '/friends', to: 'pages#friends'
   get '/profile', to: 'pages#profile'
+  get '/profile_edit', to: 'pages#profile_edit'
+  get '/sign_in', to: 'pages#sign_in'
+  get '/sign_up', to: 'pages#sign_up'
+  get '/forgot_password', to: 'pages#forgot_password'
+  get '/reset_password', to: 'pages#reset_password'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
